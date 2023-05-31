@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Resultados
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of arrayDados">
+    <ion-card-header>
+      <ion-card-title>{{ item.titulo }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ item.descricao }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button default-href="*"></ion-back-button>
+  </ion-buttons>
+</ion-toolbar>
+

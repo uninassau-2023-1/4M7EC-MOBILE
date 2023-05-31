@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Formulário de Registro
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nome</ion-label>
+      <ion-input [(ngModel)]="nome" name="nome" type="text"></ion-input>
+    </ion-item>
+    <ion-button expand="full" (click)="adicionarRegistro()">Adicionar Registro</ion-button>
+  </ion-list>
+
+  <ion-list *ngIf="registros.length > 0">
+    <ion-list-header>
+      Registros
+    </ion-list-header>
+    <ion-item *ngFor="let registro of registros">
+      {{ registro }}
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-button routerLink = "/page4">Pagina ticket</ion-button>
+
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button default-href="*"></ion-back-button>
+  </ion-buttons>
+</ion-toolbar>
